@@ -1,5 +1,11 @@
 var el = x => document.getElementById(x);
 
+var audio;
+function playres()
+{
+  audio.play();
+}
+
 function showPicker() {
   el("file-input").click();
 }
@@ -30,8 +36,7 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Predicted note denomination outcome =${response["result"]}`;
-      var audio = new Audio('https://drive.google.com/open?id=1XZRYFQwobkc5y3YXplVVGctqugRcs0Nv');
-      audio.play();
+      audio = new Audio('https://drive.google.com/open?id=1XZRYFQwobkc5y3YXplVVGctqugRcs0Nv');
     }
     el("analyze-button").innerHTML = "Analyze";
   };
