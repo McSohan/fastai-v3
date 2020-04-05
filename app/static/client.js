@@ -1,9 +1,14 @@
 var el = x => document.getElementById(x);
 
-var audio;
-function playres()
-{
-  audio.play();
+async function playAudio() {
+  var audio = new Audio('https://file-examples.com/wp-content/uploads/2017/11/file_example_WAV_1MG.wav');  
+  audio.type = 'audio/wav';
+  try {
+    await audio.play();
+    console.log('Playing...');
+  } catch (err) {
+    console.log('Failed to play...' + error);
+  }
 }
 
 function showPicker() {
@@ -36,7 +41,6 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Predicted note denomination outcome =${response["result"]}`;
-      audio = new Audio("https://file-examples.com/wp-content/uploads/2017/11/file_example_WAV_1MG.wav");
     }
     el("analyze-button").innerHTML = "Analyze";
   };
