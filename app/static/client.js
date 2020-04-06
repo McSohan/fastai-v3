@@ -37,7 +37,7 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Predicted note denomination outcome =${response["result"]}`;
-      var compString = "hello"
+      var compString = "hello";
       if (compString == "hello1")
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/100rs.wav');
       else if (compString == "hello")
