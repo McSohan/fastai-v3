@@ -1,6 +1,7 @@
 var el = x => document.getElementById(x);
 
 var audio;
+var compString;
 
 function setAudio(url) {
   audio = new Audio(url);  
@@ -37,12 +38,12 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Predicted note denomination outcome =${response["result"]}`;
-      var compString = `${response["result"]`;
-      if (compString == "100;inr")
+      compString = `${response["result"]}`;
+      if (compString == `200;inr`)
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/100rs.wav');
-      else if (compString == "50;inr")
+      else if (compString == `50;inr`)
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/50rs.wav');
-      else if(compString == "200;inr")
+      else if(compString == `${response["result"]}`)
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/200rs.wav');
       else
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/500rs.wav');
