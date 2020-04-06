@@ -37,7 +37,7 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Predicted note denomination outcome =${response["result"]}`;
-      setAudio('https://file-examples.com/wp-content/uploads/2017/11/file_example_WAV_1MG.wav');
+      setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/100rs.wav');
     }
     el("analyze-button").innerHTML = "Analyze";
     audio.play();
