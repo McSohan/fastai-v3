@@ -37,13 +37,15 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Predicted note denomination outcome =${response["result"]}`;
-      var compString = "hello";
-      if (compString == "hello1")
+      var compString = "200;inr";
+      if (compString == "${response["result"]}")
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/100rs.wav');
-      else if (compString == "hello")
+      else if (compString == `${response["result"]}`)
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/50rs.wav');
-      else
+      else if(compString == ${response["result"]})
         setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/200rs.wav');
+      else
+        setAudio('https://raw.githubusercontent.com/McSohan/fastai-v3/webcam_attempt/500rs.wav');
     }
     el("analyze-button").innerHTML = "Analyze";
     audio.play();
