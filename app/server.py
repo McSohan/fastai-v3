@@ -12,7 +12,7 @@ from starlette.staticfiles import StaticFiles
 export_file_url = 'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj'
 #'https://drive.google.com/uc?export=download&id=1--VWLoxb1w91Jc_NcY6H45Uo9ONDau8B' -new link (unpickling error)
 #'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj' - old link
-export_file_name = 'export.pkl'
+export_file_name = 'multi-class.pkl'
 #'export.pkl'
 
 classes_recent = ['100', '200', '50', '500']
