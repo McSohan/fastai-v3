@@ -9,7 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj'
+export_file_url = 'https://drive.google.com/file/d/1-1FF557F6ersP4M3kD4b-deDlNNuXOOR/view?usp=sharing'
+#'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj' - old link
 export_file_name = 'multi-class.pkl'
 
 classes_recent = ['100', '200', '50', '500']
