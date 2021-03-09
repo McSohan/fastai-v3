@@ -17,12 +17,13 @@
     </p>
     <div class='content'>
       <div class='no-display'>
-        <input id='file-input'
+<!--         <input id='file-input'
                class='no-display'
                type='file'
                name='file'
                accept='image/*'
-               onchange='showPicked(this)'>
+               onchange='showPicked(this)'> -->
+        <input type="file" name="file" accept="image/*" capture="user">
       </div>
       <button class='choose-file-button' type='button' onclick='showPicker()'>Select a valid image</button>
       <div class='upload-label'>
