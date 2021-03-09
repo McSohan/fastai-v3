@@ -9,9 +9,10 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1--VWLoxb1w91Jc_NcY6H45Uo9ONDau8B'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj'
+#'https://drive.google.com/uc?export=download&id=1--VWLoxb1w91Jc_NcY6H45Uo9ONDau8B' -new link (unpickling error)
 #'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj' - old link
-export_file_name = 'tr1-4.pth'
+export_file_name = 'export.pkl'
 #'export.pkl'
 
 classes_recent = ['100', '200', '50', '500']
@@ -26,7 +27,7 @@ classes_multi = ['inr/50',
  'usd/20',
  'usd/5',
  'usd/50']
-classes = classes_recent
+classes = classes_multi
 path = Path(__file__).parent
 
 app = Starlette()
