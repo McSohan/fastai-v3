@@ -11,7 +11,7 @@ from starlette.staticfiles import StaticFiles
 
 export_file_url = 'https://drive.google.com/uc?id=1-1FF557F6ersP4M3kD4b-deDlNNuXOOR&export=download'
 #'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj' - old link
-export_file_name = 'multi-class.pkl'
+export_file_name = 'export.pkl'
 
 classes_recent = ['100', '200', '50', '500']
 classes_single = ['1', '10', '100', '20', '200', '5', '50', '500', 'inr', 'usd']
